@@ -71,7 +71,7 @@ jobs:
           # list of Docker images to use as base name for tags
           images: |
             jericson/jekyll
-            ghcr.io/jericson/jekyll
+            # ghcr.io/jericson/jekyll
           flavor: |
             latest=false
           tags: |
