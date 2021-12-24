@@ -1,12 +1,12 @@
 # Jekyll in a Docker Container
 
-[![GitHub Super-Linter](https://github.com/bretfisher/jekyll-serve/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
-![Build and Push Image](https://github.com/bretfisher/jekyll-serve/actions/workflows/docker-build-and-push.yml/badge.svg?branch=main)
+[![GitHub Super-Linter](https://github.com/jericson/jekyll-serve/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+![Build and Push Image](https://github.com/jericson/jekyll-serve/actions/workflows/docker-build-and-push.yml/badge.svg?branch=main)
 
 > But this has been done. Why not `docker run jekyll/jekyll`?
 
-- I wanted two images, one for easy CLI (`bretfisher/jekyll`) and one for
-easy local server for dev with sane defaults (`bretfisher/jekyll-serve`), which I use 90% of time
+- I wanted two images, one for easy CLI (`jericson/jekyll`) and one for
+easy local server for dev with sane defaults (`jericson/jekyll-serve`), which I use 90% of time
 - So you can start any Jekyll server with `docker-compose up`
 - I wanted to dev on a local jekyll site w/o having jekyll installed on my host OS
 - I wanted it to be as easy as possible to start
@@ -14,7 +14,7 @@ easy local server for dev with sane defaults (`bretfisher/jekyll-serve`), which 
 
 > So, this does that.
 
-Note [I have courses on Docker (including a Lecture on Jekyll in Docker)](https://www.bretfisher.com/courses).
+Note the original author of this image [has courses on Docker (including a Lecture on Jekyll in Docker)](https://www.bretfisher.com/courses).
 
 :bangbang: :bangbang: :bangbang:
 
@@ -28,8 +28,8 @@ should pin all versions usually.)
 
 | Image | Purpose | Example |
 | ----- | ------- | ------- |
-| [bretfisher/jekyll](https://hub.docker.com/r/bretfisher/jekyll/) | Runs Jekyll by default with no options, good for general CLI commands | `docker run -v $(pwd):/site bretfisher/jekyll new .` |
-| [bretfisher/jekyll-serve](https://hub.docker.com/r/bretfisher/jekyll-serve/) | Runs Jekyll serve with sane defaults, good for local Jekyll site dev | `docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve` |
+| [jericson/jekyll](https://hub.docker.com/r/jericson/jekyll/) | Runs Jekyll by default with no options, good for general CLI commands | `docker run -v $(pwd):/site jericson/jekyll new .` |
+| [jericson/jekyll-serve](https://hub.docker.com/r/jericson/jekyll-serve/) | Runs Jekyll serve with sane defaults, good for local Jekyll site dev | `docker run -p 4000:4000 -v $(pwd):/site jericson/jekyll-serve` |
 
 ## Getting Started
 
@@ -37,14 +37,14 @@ Creating a site:
 
 ```shell
 cd to empty directory
-docker run -v $(pwd):/site bretfisher/jekyll new .
+docker run -v $(pwd):/site jericson/jekyll new .
 ```
 
 Start a local server with sane defaults listening on port 4000:
 
 ```shell
 cd dir/of/your/jekyll/site
-docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
+docker run -p 4000:4000 -v $(pwd):/site jericson/jekyll-serve
 ```
 
 That's it!
@@ -53,7 +53,7 @@ Details: it will mount your current path into the containers `/site`, `bundle in
 `jekyll serve` to , serve it at `http://<docker-host>:4000`.
 
 To make this even easier, copy `docker-compose.yml`
-[from this repo](https://github.com/BretFisher/jekyll-serve/blob/master/docker-compose.yml)
+[from this repo](https://github.com/Jericson/jekyll-serve/blob/master/docker-compose.yml)
 to your jekyll site root. Then you'll only need to:
 
 ```shell
@@ -78,17 +78,17 @@ docker-compose up
 
 **Q. What if I want to run other jekyll commands?**
 
-just add the jekyll options to the end of the `bretfisher/jekyll`:
+just add the jekyll options to the end of the `jericson/jekyll`:
 
 ```shell
-docker run -v $(pwd):/site bretfisher/jekyll doctor
+docker run -v $(pwd):/site jericson/jekyll doctor
 ```
 
 ## License
 
 MIT License
 
-Copyright (c) [Bret Fisher bret@bretfisher.com]
+Copyright (c) [Jon Ericson jon@jlericson.com]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
