@@ -10,7 +10,7 @@ easy local server for dev with sane defaults (`jericson/jekyll-serve`), which I 
 - So you can start any Jekyll server with `docker-compose up`
 - I wanted to dev on a local jekyll site w/o having jekyll installed on my host OS
 - I wanted it to be as easy as possible to start
-- I wanted current alpine, ruby, and jekyll (these images update monthly to latest versions)
+- I wanted current debian/alpine, ruby, and jekyll (these images update monthly to latest versions)
 
 > So, this does that.
 
