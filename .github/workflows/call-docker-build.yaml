@@ -19,7 +19,7 @@ on:
     # re-run montly to keep image fresh with upstream base images
     - cron: '0 12 15 * *'
 
-   workflow_dispatch:
+  workflow_dispatch:
    
 jobs:
 
