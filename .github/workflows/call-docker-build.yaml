@@ -20,6 +20,9 @@ on:
     - cron: '0 12 15 * *'
 
   workflow_dispatch:
+    inputs:
+      tags:
+        description: "Allow manual triggering"
    
 jobs:
 
