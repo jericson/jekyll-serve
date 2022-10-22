@@ -45,8 +45,8 @@ jobs:
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
     with:
-      dockerhub-enable: true
-      ghcr-enable: true
+      dockerhub-enable: false
+      ghcr-enable: false
       image-names: |
         bretfisher/jekyll
         ghcr.io/bretfisher/jekyll
@@ -76,8 +76,8 @@ jobs:
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
     with:
-      dockerhub-enable: true
-      ghcr-enable: true
+      dockerhub-enable: false
+      ghcr-enable: false
       image-names: |
         bretfisher/jekyll-serve 
         ghcr.io/bretfisher/jekyll-serve
@@ -103,8 +103,8 @@ jobs:
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
     with:
-      dockerhub-enable: true
-      ghcr-enable: true
+      dockerhub-enable: false
+      ghcr-enable: false
       file: alpine.Dockerfile
       comment-enable: false
       image-names: |
@@ -141,8 +141,8 @@ jobs:
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
 
     with:
-      dockerhub-enable: true
-      ghcr-enable: true
+      dockerhub-enable: false
+      ghcr-enable: false
       file: alpine.Dockerfile
       comment-enable: false
       image-names: |
