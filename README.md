@@ -3,16 +3,7 @@
 [![GitHub Super-Linter](https://github.com/jericson/jekyll-serve/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ![Build and Push Image](https://github.com/jericson/jekyll-serve/actions/workflows/docker-build-and-push.yml/badge.svg?branch=main)
 
-> But this has been done. Why not `docker run jekyll/jekyll`?
-
-- I wanted two images, one for easy CLI (`jericson/jekyll`) and one for
-easy local server for dev with sane defaults (`jericson/jekyll-serve`), which I use 90% of time
-- So you can start any Jekyll server with `docker-compose up`
-- I wanted to dev on a local jekyll site w/o having jekyll installed on my host OS
-- I wanted it to be as easy as possible to start
-- I wanted current debian/alpine, ruby, and jekyll (these images update monthly to latest versions)
-
-> So, this does that.
+This is a fork of [BretFisher/jekyll-serve](https://github.com/BretFisher/jekyll-serve). The only thing I really changed is to include `--draft` in the Jekyll call so that I can use this image for previewing [my blog posts](https://github.com/jericson/jericson.github.io).
 
 Note the original author of this image [has courses on Docker (including a Lecture on Jekyll in Docker)](https://www.bretfisher.com/courses).
 
