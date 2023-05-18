@@ -46,7 +46,7 @@ jobs:
 
     with:
       dockerhub-enable: false
-      ghcr-enable: false
+      ghcr-enable: true
       image-names: |
         jericson/jekyll
         ghcr.io/jericson/jekyll
